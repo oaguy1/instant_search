@@ -1,4 +1,4 @@
-instant_search
+Instant Search
 ==============
 
 Autocomplete System
