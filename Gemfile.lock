@@ -14,6 +14,8 @@ GEM
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -38,5 +40,6 @@ PLATFORMS
 DEPENDENCIES
   aws-sdk
   rack
+  rack-test
   rspec
   sinatra
