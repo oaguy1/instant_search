@@ -2,8 +2,9 @@ require 'rspec'
 require 'rack/test'
 
 # load app
-SPEC_DIR = File.expand_path File.dirname(__FILE__)
-require File.join(SPEC_DIR, "../instant_search.rb")
+ROOT_DIR = File.join(File.expand_path(File.dirname(__FILE__)), './..')
+require File.join(ROOT_DIR, "instant_search.rb")
+require File.join(ROOT_DIR, 'script/populate_dynmo')
 
 ENV['RACK_ENV'] = 'test'
 
