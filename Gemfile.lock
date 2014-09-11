@@ -41,6 +41,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk
+  json
   mysql2
   rack
   rack-test
