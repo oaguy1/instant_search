@@ -26,3 +26,22 @@ get '/s' do
 
     jsn = { :q => db_query, :d => data }.to_json
 end
+
+get '/keyword' do
+    db_query = params[:q]
+    results = DB[
+        "
+        SELECT name, score
+            FROM full_queries
+            WHERE name LIKE ? 
+            ORDER BY score DESC", "%#{db_query}%"]
+
+    if params[:limit]
+        limit = params[:limit].to_i
+        data = results.limit(limit).collect { |result| result[:name] }
+    else
+        data = results.all.collect { |result| result[:name] }
+    end
+
+    jsn = { :q => db_query, :d => data }.to_json
+end
