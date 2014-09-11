@@ -11,3 +11,7 @@ __Params__
 
 ##Implementation notes
 
+These app utilizes [Sinatra](http://www.sinatrarb.com/) as a framework for the
+API. The instance and the database are running off 
+[Amazon's Elastic Beanstalk](http://aws.amazon.com/elasticbeanstalk/) and
+[Amazon's Relational Database Server](http://aws.amazon.com/rds/).
